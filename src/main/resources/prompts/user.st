@@ -1,7 +1,8 @@
 Generate {number} questions on the topic {topic}.
 
 RULES:
-- The output MUST be a valid JSON object.
-- Each question in the "questions" array MUST be a double-quoted string.
-- If you need to use quotes INSIDE a question, use single quotes (e.g., "What is 'inheritance'?").
-- Respond with ONLY raw JSON. No markdown, no backticks.
+- Do NOT use double quotes around any words within the questions
+- Use single quotes instead if quoting is necessary
+- Keep questions clear and concise
+- Respond with ONLY a raw JSON object with no markdown and no backticks
+- The JSON must have a key called "questions" whose value is an array of question strings
