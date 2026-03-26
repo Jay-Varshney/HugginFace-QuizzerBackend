@@ -1,11 +1,8 @@
 ---
-title: Quizzer Backend
-emoji: 📝
-colorFrom: blue
-colorTo: indigo
+title: Your-Space-Name
 sdk: docker
-pinned: false
+app_port: 7860
+emoji: 🚀
+colorFrom: blue
+colorTo: green
 ---
-
-# Quizzer Backend
-Spring Boot application for quiz generation.
