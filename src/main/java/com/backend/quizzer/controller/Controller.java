@@ -3,13 +3,11 @@ package com.backend.quizzer.controller;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.backend.quizzer.dto.Evaluate;
+import com.backend.quizzer.dto.EvaluateByContent;
 import com.backend.quizzer.dto.Evaluation;
 import com.backend.quizzer.dto.Question;
 import com.backend.quizzer.service.ChatService;
-import jakarta.servlet.http.HttpServletResponse;
-import java.io.IOException;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -58,5 +56,17 @@ public class Controller {
     public Evaluation evaluateTheAnswers(@RequestBody Evaluate eval) {
         return chatService.evaluate(eval);
     }
+
+    @GetMapping("/chat/genQueViaGivenContent")
+    public Question genQueViaGivenContent(@RequestParam("n") int num, @RequestParam("content") String c) {
+        return chatService.genQueViaGivenContent(num, c);
+    }
+
+    @PostMapping("/chat/evalByContent")
+    public Evaluation evalByContent(@RequestBody EvaluateByContent eval) {
+        return chatService.evaluateByContent(eval);
+    }
+    
+    
 
 }

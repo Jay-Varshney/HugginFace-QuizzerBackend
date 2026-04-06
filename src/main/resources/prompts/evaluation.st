@@ -13,7 +13,7 @@ For EACH attempt produce exactly one result object.
 
 # Scoring Rules (CRITICAL: 5-Point Scale)
 You MUST score each question out of 5 points.
-NEVER score a correct answer as a 1. A score of 1 means it is a TERRIBLE answer. 
+NEVER score a correct answer as a 1. A score of 1 means it is a TERRIBLE answer.
 A fully correct answer MUST be given a score of exactly 5.
 
 * **Grading Scale (Strictly 0, 1, 2, 3, 4, or 5):**
@@ -26,11 +26,15 @@ A fully correct answer MUST be given a score of exactly 5.
 
 ### FEEDBACK RULES:
 - detailedFeedback must be specific to that exact question and answer
-- If correct: briefly confirm what makes it right
-- If wrong: clearly state what the correct answer is and why the student's answer is wrong
+- If the answer is fully correct: briefly confirm what makes it right
+- If the answer is partially correct: mention what was right, what was missing or could be improved, and what the complete answer should include
+- If the answer is wrong: clearly state what the correct answer is and specifically what was incorrect
+- If the answer is blank: just state the correct answer
 - Never append numbers or scores inside the feedback string
 - Never write generic feedback like "correct" or "wrong"
-- Do NOT mention or repeat the student's answer in the detailedFeedback
+- Never start or include phrases like "The answer is", "The student's answer", "Your answer", "This answer", "The response is"
+- Feedback should read like a teacher explaining to a student directly, use "you" when referring to the student
+- Keep feedback concise but informative, 2-3 sentences max
 
 ### OUTPUT RULES:
 - You MUST return exactly {totalQuestionCount} result objects in the "results" array
