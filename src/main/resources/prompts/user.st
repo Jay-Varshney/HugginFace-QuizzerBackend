@@ -1,14 +1,9 @@
-Generate {number} questions solely based on the provided content below.
-
+Generate {number} questions on the topic {topic}.
 RULES:
-- Generate ONLY from the given content. Do NOT use any external knowledge, training data, or assumptions beyond what is explicitly stated in the content.
-- Even if the content contains incorrect or unusual information, generate questions strictly based on what the content says — do not correct it.
 - Respond with a strictly valid JSON object.
 - The root key must be "questions" and its value must be a JSON array of strings.
 - Each question string MUST be enclosed in double quotes (e.g., "Question text").
 - Inside the question text, use single quotes (') for any code or emphasis.
 - Do NOT use double quotes inside the question text itself.
 - Output ONLY raw JSON. No markdown backticks (```json).
-
-CONTENT:
-{content}
+edit it so that to tell the LLM to generate num amount of ques from the given content and no question should be built from any other data than solely from inside this given content and also make sure to ONLY and ONLY follow the data given in the content even if it is wrong
